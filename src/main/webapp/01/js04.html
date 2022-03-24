@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	a=7;
+	b="대박";
+	var c = 1.56;
+	var d = '5분';
+	let e = 'eee분';
+	document.write("정수a : "+a+"<p>");
+	document.write("정수b : "+b+"<br>");
+	document.write("정수c : "+c+"<br>");
+	document.write("정수d : "+d+"<br>");
+	document.write("정수e : "+e+"<p>");
+	
+	function varTest(){
+		var x = 1;
+		if(true){ 
+			var x = 2; // 같은 변수 
+			alert(x); //2
+		}
+		alert(x); //2
+	}
+	
+	function letTest(){
+		let x = 1;
+		if(true){
+			let x = 2; //다른변수
+			alert(x) //2
+		}
+		alert(x); //1
+	}
+</script>
+
+<body>
+	<button onclick="varTest()">varTest()</button>
+	<button onclick="letTest()">letTest()</button>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk() {
+		var mStr = "좋아하는 영화는?\n"
+			for (var i = 0; i < frm.movie.length; i++) {
+				if(frm.movie[i].checked){
+					mStr+=frm.movie[i].value+"\n";
+					break;
+				}
+				
+			} alert(mStr);
+	}
+</script>
+</head>
+
+<body>
+	<form action="" name="frm">
+		<h2>다음에서 선택하세요</h2>
+		1. 가장 좋아하는 영화를 한개만 선택하세요
+		<br>
+		<input type="radio" name="movie" value="가디언즈오브갤럭시" id="m1">
+		가디언즈오브갤럭시
+		<!-- 중복이 안되는 건 radio 
+		중복이 가능한 건 check-->
+		<input type="radio" name="movie" value="해리포터" id="m2">
+		<label for="m2" >해리포터</label>
+		
+		<input type="radio" name="movie" value="유전" id="m3">
+		<label for="m3" ></label>
+		
+		<hr>
+		<input type="button" value="확인" onclick="chk()">
+		
+	</form>
+</body>
+</html>

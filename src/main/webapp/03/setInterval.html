@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body onload="init()">
+	<input type="text" id="parentInput"></input>
+	
+	<script type="text/javascript">
+		var parentInput = document.getElementById("parentInput")
+		var message; 
+		function init(){
+			var time = setInterval (function(){
+				var date = new Date();
+				var hour = date.getHours();
+				var min = date.getMinutes();
+				var sec = date.getSeconds();
+				message = hour +"시 "+min+"분 "+sec+"초";
+				parentInput.value = message;
+			}, 1000); /* setinterval 1초마다 실행  */
+			
+			setTimeout(function(){
+				clearInterval(time);
+			}, 11000); /* interval 에 대해서 멈추는 역할 11초  */
+		}
+	</script>
+
+</body>
+</html>

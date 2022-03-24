@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>name 속성을 이용한 선택</h1>
+	<p name="first">첫번째 단락</p>
+	<ul>
+		<li name="first">첫 번째 아이템</li>
+		<li>두 번째 아이템</li>
+		<li>세 번째 아이템</li>
+		<li id="id3">네 번째 아이템</li>
+		<li>다섯 번째 아이템</li>
+	</ul>
+	
+	<script type="text/javascript">
+		var selectedItem = document.getElementsByName("first");
+		var selectedIdItem = document.getElementById("id3");
+		//  document = dom body 
+		for (var i = 0; i < selectedItem.length; i++) {
+			// 인덱스 처럼 0번째가 -> p first 
+			selectedItem.item(i).style.color = "red";
+			}
+			selectedIdItem.style.backgroundColor = "orange";
+		
+	</script>
+	
+</body>
+</html>

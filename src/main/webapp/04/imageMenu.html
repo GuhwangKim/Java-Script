@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	overImg = new Array();
+	outImg = new Array();
+	// 껍데기만 만들어 놓고 실제 이미지 삽입 
+	for (var i = 0; i < 4; i++) {
+		overImg[i] = "../images/"+i+"over.jpg";
+		outImg[i] = "../images/"+i+"out.jpg";
+		//prImg[i] = "../images/"+i+"pr.jpg";
+	}
+	function ov (num){
+		document.images[num].src = overImg[num];
+	}
+	function op (num){
+		alert("onmousedown")
+		document.images[num].src = "0pr.jpg";
+	}
+	function ot (num){
+		document.images[num].src = outImg[num];
+	}
+	
+	
+</script>
+</head>
+<body>
+	<img src ="../images/0out.jpg" onmouseover="ov(0)" onmouseout="ot(0)"><p>
+	<!-- 디폴트 값은 우선 out 형태 ---------- on 을 누르면 --------- out을 누르면 --> 
+	<img src ="../images/1out.jpg" onmouseover="ov(1)" onmouseout="ot(1)"><p>
+	<img src ="../images/2out.jpg" onmouseover="ov(2)" onmouseout="ot(2)"><p>
+	<img src ="../images/3out.jpg" onmouseover="ov(3)" onmouseout="ot(3)">
+
+</body>
+</html>

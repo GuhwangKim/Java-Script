@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var wo = {"name":"태연", "addr":"전주"};
+	// jason 객체를 String 객체로 변환 
+	alert("JSON.stringify(wo)->"+JSON.stringify(wo));
+	// JSON.stringify = 객체를 string으로 바꾸어라
+	alert("JSON.parse(JSON.stringify(wo))->"+JSON.parse(JSON.stringify(wo)).name);
+	// JSON.string 형태를 다시 parsing ---> json 형태로 변경 
+	alert("wo.addr->"+wo.addr);
+</script>
+</head>
+<body>
+
+</body>
+</html>

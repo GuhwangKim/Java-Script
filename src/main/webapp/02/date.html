@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var date = new Date();
+	var year = date.getFullYear();
+	var month = date.getMonth();
+	var day = date.getDate(); // date 일자 
+	document.write(date+"<br>");
+	document.write(year+"년"+month+"월"+day+"일<br>");
+	
+	// 요일 get
+	
+	switch (date.getDay()){ // day = 요일 
+	case 0 : 
+		document.write("일요일입니다.<br>"); break;
+	case 1 : 
+		document.write("월요일입니다.<br>"); break;
+	case 2 : 
+		document.write("화요일입니다.<br>"); break;
+	case 3 : 
+		document.write("수요일입니다.<br>"); break;
+	case 4 : 
+		document.write("목요일입니다.<br>"); break;
+	case 5 : 
+		document.write("금요일입니다.<br>"); break;
+	case 6 : 
+		document.write("토요일입니다.<br>"); break;
+				
+	}
+	date = new Date(2022, 03, 08);
+	year = date.getFullYear();
+	month = month.getMonth() +1;
+	day = date.getDate();
+	document.write(year+"년"+month+"월"+day+"일<br>")
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

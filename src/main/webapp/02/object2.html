@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	var person  = {
+			name: "홍길동",
+			birthday: "030219",
+			pId:"1234567", // 개인 id
+			fullId: function(){
+				return this.birthday + this.pId;
+			} //나의 객체에 있는 
+	};
+	
+	document.write("person.name---->"+person.name+"<p>");
+	document.write("person.fullId---->"+person.fullId()+"<p>");
+	// 함수가 있는 key 호출할 땐 fullId()
+	
+</script>
+<body>
+
+</body>
+</html>

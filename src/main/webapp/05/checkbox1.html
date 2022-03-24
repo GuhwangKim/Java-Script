@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk() {
+		var str = "좋아하는 영화는? \n";
+		if(frm.ch1.checked) str += frm.ch1.value+"\n";
+		/* checkbox의 특성상 checked 가 있음 / str= value 가 표시됨 */ 
+		if(frm.ch2.checked) str += frm.ch2.value+"\n";
+		if(frm.ch3.checked) str += frm.ch3.value+"\n";
+		alert(str);
+	}
+</script>
+</head>
+<body>
+	<h2>좋아하는 영화를 선택하세요</h2>
+	<form name="frm">
+		<label for="m1">모럴렌스:</label>
+			<input type="checkbox" name="ch1" id="m1" value="모럴센스">
+			<!-- 
+			class 디자인 (그룹)
+			id 는 디자인 js (각자)
+			name 은 js parameter (그룹)  -->
+		<label for="m2">소년심판:</label>
+			<input type="checkbox" name="ch2" id="m2" value="소년심판">
+		<label for="m3">서른아홉:</label>
+			<input type="checkbox" name="ch3" id="m3" value="서른아홉">
+		<input type="button" value="확인" onclick="chk()">
+	</form>
+</body>
+</html>

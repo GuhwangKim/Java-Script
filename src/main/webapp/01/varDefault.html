@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	function foo() {
+		var x = "foo"; // var 는 함수 내 전역
+		alert("foo : "+x);
+	}
+	
+	function bar() {
+		x = "bar"; // var 없으면 전역변수 처럼 
+		alert("bar : "+x);
+	}
+	foo();
+	bar();
+	console.log("global : "+x); // 개바라만 볼 수 있음 
+</script>
+<body>
+
+</body>
+</html>
